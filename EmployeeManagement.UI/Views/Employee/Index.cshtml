@@ -1,12 +1,15 @@
 ﻿@model IEnumerable<EmployeeViewModel>
 
     <div class="text-center">
-        <h4 class="display-4">EMPLOYEE LIST</h4>
+        <h1><b><u>EMPLOYEE LIST</u></b></h1>
     </div>
-
-<div class="text-center">
+<br>
+    <div class="text-center">
         <button class="btn btn-success" data-toggle="modal" data-target="#myModal"> CREATE NEW EMPLOYEE</button>
-</div>
+        <br>
+        <br>
+    </div>
+ 
 <div class="text-center">
 <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -21,11 +24,12 @@
                     <input type="text" style="width:100%" id="name" name="name" placeholder="Enter The Name" required pattern="[A-Za-z\s\.]{1,20}" maxlength="20"/><br>
                     <label>Department</label><br>
                     <select type="text" name="Dept" id="dept" style="width:100%">
+                        <option value="Test">Select An Option</option>
                         <option value="Testing">Testing</option>
                         <option value="Developer">Developer</option>
                         <option value="Finance">Finance</option>
                         <option value="Accountant">Accountant</option>
-                        <option value="hr">HR</option>
+                        <option value="HR">HR</option>
                     </select><br>
                     <label>Age</label><br>
                     <input type="number" style="width:100%" id="age" name="age" placeholder="Enter The Age" required min="18" max="50"/><br>
@@ -39,7 +43,7 @@
 </div>
     </div>
 <div class="text-center">
-<table class="table table-bordered" border="1">
+<table class="table table-secondary" border="1" >
     <thead>
         <tr>
             <td>

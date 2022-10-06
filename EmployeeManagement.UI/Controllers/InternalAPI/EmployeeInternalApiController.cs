@@ -17,7 +17,7 @@ namespace EmployeeManagement.UI.Controllers.InternalAPI
 
         public EmployeeInternalApiController(IEmployeeApiClient employeeApiClient)
         {
-            _employeeApiClient = employeeApiClient;
+           this._employeeApiClient = employeeApiClient;
         }
 
         [HttpGet]
@@ -34,7 +34,7 @@ namespace EmployeeManagement.UI.Controllers.InternalAPI
         public IActionResult InsertEmployee([FromBody] EmployeeDetailedViewModel employee)
         {        
                 var insertEmployee = _employeeApiClient.InsertEmployee(employee);
-                return Ok(employee.Id);           
+                return Ok(insertEmployee);           
         }
 
         [HttpPut]
@@ -42,7 +42,7 @@ namespace EmployeeManagement.UI.Controllers.InternalAPI
         public IActionResult EditEmployee([FromBody] EmployeeDetailedViewModel employee)
         {
                 var editEmployee = _employeeApiClient.EditEmployee(employee);
-                return Ok(employee.Id);          
+                return Ok(editEmployee);          
         }
 
         [HttpDelete]

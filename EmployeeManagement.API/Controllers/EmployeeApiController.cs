@@ -22,7 +22,6 @@ namespace EmployeeManagement.API.Controllers
         }
 
         /// get employee by calling GetEmployeeById() in IEmployeeService and store it in a variable and Map that variable to EmployeeDetailedViewModel.
-        /// 
 
         [HttpGet]
         [Route("employees")]
@@ -32,7 +31,6 @@ namespace EmployeeManagement.API.Controllers
             {                                 
                 var getEmployeeViewModel =  _employeeService.GetEmployees();
                 return Ok(MapToGetEmployee(getEmployeeViewModel));
-                //return MapToGetEmployee(getEmployeeViewModel);
             }
             catch (Exception )
             {

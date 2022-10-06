@@ -15,15 +15,15 @@ function bindEvents() {
             contentType: "application/json; charset=utf-8",
             success: function (result) {
                 var newEmployeeCard = `<div class="card">
-                                          <h3>${result.name}</h3>
+                                          <h4>${result.name}</h4>
                                          <b>Id :</b> <p>${result.id}</p>
                                          <b>Department:</b><p>${result.department}</p>
                                          <b>Age:</b><p>${result.age}</p>
                                          <b>Address:</b><p>${result.address}</p>
                                         </div>`
 
-                $("#EmployeeCard").html(newEmployeeCard);
-                showEmployeeDetailCard();
+                $("#EmployeeCard").html(newEmployeeCard).toggle();
+                //showEmployeeDetailCard();
             },
             error: function (error) {
                 console.log(error);
@@ -164,9 +164,9 @@ function bindEvents() {
     });*/
 }
 
-    function hideEmployeeDetailCard() {
+    /*function hideEmployeeDetailCard() {
         $("#EmployeeCard").hide();
-    }
+    }*/
 
     function showEmployeeDetailCard() {
         $("#EmployeeCard").show();

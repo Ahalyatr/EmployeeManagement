@@ -4,7 +4,7 @@ use EvaluationProject
 
 create Table Employee
 (
-Id int primary key identity(100,1),
+Id int primary key identity(1,1),
 Name varchar(20) not null,
 Department varchar(30) not null,
 Age int not null,
@@ -20,7 +20,7 @@ values
 
 select * from Employee
 
-
+drop table Employee
 
 
 
