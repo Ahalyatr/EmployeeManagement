@@ -75,10 +75,7 @@ function bindEvents() {
             contentType: "application/json; charset=utf-8",
             data: data,
             success: function (result) {
-                if (result.success == true) {
-                    setTimeout(function () { location.reload(); }, 5000);
-                }
-                //location.reload();
+                location.reload();
             },
             error: function (error) {
                 console.log(error);
@@ -134,34 +131,6 @@ function bindEvents() {
             alert("EDITED SUCCESSFULLY");
         });
     });
-     
-
-    /*$("#update").submit(function (event) {
-
-        var Employee = {};
-        Employee.id = Number($("#editid").val());
-        Employee.Name = $("#editname").val();
-        Employee.Department = $("#editdept").val();
-        Employee.Age = Number($("#editage").val());
-        Employee.Address = $("#editaddress").val();
-
-        var data = JSON.stringify(Employee);//convertion
-
-        $.ajax({
-            url: 'https://localhost:6001/api/internal/employee/employeeedit',
-            type: 'PUT',
-            dataType: 'json',
-            contentType: "application/json; charset=utf-8",
-            data: data,
-            success: function (data) {
-                location.reload();
-            },
-            timeout: 2000,
-            error: function (error) {
-                console.log(error);
-            }
-        });
-    });*/
 }
 
     /*function hideEmployeeDetailCard() {
